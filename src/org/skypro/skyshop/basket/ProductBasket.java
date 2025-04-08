@@ -33,7 +33,7 @@ public class ProductBasket {
         boolean isEmpty = true;
         for (Product product : productsBasket) {
             if (product != null) {
-                System.out.println(product.getNameProduct() + ": " + product.getPrice());
+                System.out.println(product.toString());
                 isEmpty = false;
             }
         }
@@ -55,7 +55,7 @@ public class ProductBasket {
     }
 
     // Очистка корзины
-        public void clearBasket1() {
+        public void clearBasket() {
         for (int i = 0; i < productsBasket.length; i++) {
             productsBasket[i] = null;
         }
