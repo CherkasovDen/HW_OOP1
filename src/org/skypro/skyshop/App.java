@@ -8,7 +8,6 @@ import org.skypro.skyshop.product.Product;
 public class App {
     public static void main(String[] args) {
 
-
         Product apple = new Product("Яблоко", 150);
         Product milk = new Product("Молоко", 82);
         Product bread = new Product("Хлеб", 70);
