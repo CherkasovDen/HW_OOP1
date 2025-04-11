@@ -6,7 +6,6 @@ public class ProductBasket {
     private Product[] productsBasket = new Product[5];
 
 
-    // Наполенение корзины
     public void addProduct(Product product) {
         for (int i = 0; i < productsBasket.length; i++) {
             if (productsBasket[i] == null) {
@@ -17,7 +16,6 @@ public class ProductBasket {
         System.out.println("Невозможно добавить продукт.");
     }
 
-    // Общая стоимость корзины
     public int getTotalPrice() {
         int totalPrice = 0;
         for (Product product : productsBasket) {
@@ -28,7 +26,6 @@ public class ProductBasket {
         return totalPrice;
     }
 
-    // Печать содержимого корзины
     public void printBasket() {
         boolean isEmpty = true;
         for (Product product : productsBasket) {
@@ -44,7 +41,6 @@ public class ProductBasket {
         System.out.println("Итого: " + getTotalPrice());
     }
 
-    // Проверка продукта в корзине
     public boolean checkProduct(String nameProduct) {
         for (Product product : productsBasket) {
             if (product != null && product.getNameProduct().equals(nameProduct)) {
@@ -54,8 +50,7 @@ public class ProductBasket {
         return false;
     }
 
-    // Очистка корзины
-        public void clearBasket() {
+    public void clearBasket() {
         for (int i = 0; i < productsBasket.length; i++) {
             productsBasket[i] = null;
         }
