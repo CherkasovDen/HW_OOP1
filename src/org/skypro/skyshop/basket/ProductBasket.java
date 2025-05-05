@@ -28,9 +28,13 @@ public class ProductBasket {
 
     public void printBasket() {
         boolean isEmpty = true;
+        int specialCount = 0;
         for (Product product : productsBasket) {
             if (product != null) {
                 System.out.println(product.toString());
+                if (product.isSpecial()) {
+                    specialCount++;
+                }
                 isEmpty = false;
             }
         }
@@ -39,6 +43,7 @@ public class ProductBasket {
             return;
         }
         System.out.println("Итого: " + getTotalPrice());
+        System.out.println("Специальных товаров: " + specialCount);
     }
 
     public boolean checkProduct(String nameProduct) {
