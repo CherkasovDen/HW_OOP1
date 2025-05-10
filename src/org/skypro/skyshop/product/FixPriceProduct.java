@@ -1,12 +1,13 @@
 package org.skypro.skyshop.product;
 
+import org.skypro.skyshop.articles.SearchEngine;
+
 public class FixPriceProduct extends Product {
     private static final int FIXED_PRICE = 113;
 
 
     public FixPriceProduct(String nameProduct) {
         super(nameProduct);
-
     }
 
     @Override
@@ -22,6 +23,15 @@ public class FixPriceProduct extends Product {
     @Override
     public boolean isSpecial() {
         return true;
+    }
 
+    @Override
+    public String getSearchTerm () {
+        return getNameProduct();
+    }
+
+    @Override
+    public String getName() {
+        return getNameProduct();
     }
 }
